@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>My Profile Site</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
@@ -24,12 +25,14 @@
             </section>
             <section id="skill">
                 <h2>Skills</h2>
-                <div class="skill-card">HTML</div>
-                <div class="skill-card">CSS</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">Sit &amp; GitHub</div>
-                <div class="skill-card">Responsive Designn</div>
-                <div class="skill-card">Web Security Basic</div>
+                <div class="skills-grid">
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">Git &amp; GitHub</div>
+                    <div class="skill-card">Responsive Designn</div>
+                    <div class="skill-card">Web Security Basic</div>
+                </div>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
@@ -45,7 +48,6 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     <label for="message">Message:</label>
-                    <input type="text" id="message" name="message" required>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
