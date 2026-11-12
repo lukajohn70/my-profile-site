@@ -20,22 +20,36 @@ body {
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: white;
+    position: relative;
 }
 
 nav {
-    display: flex;
-    gap: 1.5rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: fit-content;
+    padding: 0.5rem 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 8px 16 px rgba(0, 0, 0, 0.15);
+    z-index: 10;
 }
 
 nav a {
     color:  white;
     text-decoration: none;
     font-weight: 500;
+    padding: 1rem 1.5rem;
+    display: block;
 }
 nav a:hover {
     text-decoration: underline;
@@ -54,16 +68,6 @@ nav a:hover {
     border-radius: 8px;
     text-align: center;
     font-weight: 500;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem 2 rem;
-    background-color: var(--primary-color);
-    color: white;
 }
 
 @media (min-width: 768px) {
@@ -134,4 +138,67 @@ footer {
     padding: 2rem;
     color: #6b7280;
     font-size: 0.9rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+nav.nav-open {
+display: flex;
+}
+
+#navToggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    line-height: 5;
+}
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+    #navToggle {
+        display: none;
+    }
+}
+
+.skill-card.selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card a {
+    color: var(--primary-color);
+    font-weight: 500;
 }
